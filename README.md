@@ -12,6 +12,31 @@ O projeto consiste em três arquivos principais:
 2. `City.java`: Representa uma cidade com nome, latitude e longitude.
 3. `CityWeatherData.java`: Armazena os dados meteorológicos processados para uma cidade.
 
+## Funcionamento
+O programa realiza as seguintes etapas:
+
+1. Define uma lista de cidades brasileiras com suas coordenadas. 
+2. Usa um executor para buscar dados meteorológicos em paralelo para todas as cidades. 
+3. Processa os dados retornados para calcular temperaturas médias, mínimas e máximas diárias. 
+4. Imprime os resultados para cada cidade. 
+5. Calcula e imprime o tempo total de execução do programa.
+
+
+## Exemplo de Saída
+
+```bash
+Buscando dados para: Brasília
+URL: https://api.open-meteo.com/v1/forecast?latitude=-15.7939&longitude=-47.8828&start_date=2024-01-01&end_date=2024-01-31&hourly=temperature_2m
+Response para Brasília: {...}
+Dados meteorológicos de Brasília:
+Day  Avg Temp  Min Temp  Max Temp
+1    25.50     20.00     30.00
+2    26.00     21.00     31.00
+...
+
+Tempo total de execução: 1234 ms
+```
+
 ## Requisitos
 
 - Java 17 ou superior
