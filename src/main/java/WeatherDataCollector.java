@@ -18,7 +18,7 @@ import java.util.concurrent.Future;
 public class WeatherDataCollector {
 
     private static final String API_URL_TEMPLATE = "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=%s&longitude=%s&start_date=%s&end_date=%s&hourly=temperature_2m";
-    private static final int NUM_THREADS = 4; // Número de threads para execução paralela
+    private static final int NUM_THREADS = 27; // Número de threads para execução paralela
 
     public static void main(String[] args) {
         // Captura o tempo de início
@@ -98,7 +98,7 @@ public class WeatherDataCollector {
         String url = String.format(API_URL_TEMPLATE, city.getLatitude(), city.getLongitude(), startDate, endDate);
 
         // Log da URL usada na requisição
-        System.out.println("Fetching data for: " + city.getName());
+        System.out.println("Buscando dados para: " + city.getName());
         System.out.println("URL: " + url);
 
         // Cria e envia a requisição HTTP
